@@ -5,12 +5,20 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./light.svg">
-    <img src="./dark.svg" alt="Abhilash Ghosh - Terminal Profile & Visual Telemetry" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/djabhi31/djabhi31/main/dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/djabhi31/djabhi31/main/light.svg">
+    <img src="https://raw.githubusercontent.com/djabhi31/djabhi31/main/dark.svg" alt="Abhilash Ghosh - Terminal Profile & Visual Telemetry" width="100%">
   </picture>
 </p>
 
+<!-- Dynamic Animated Typing Header -->
+<p align="center">
+  <a href="https://abhilashghosh.pages.dev/">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=780&lines=Full-Stack+%26+3D+Web+Systems+Engineer;Creative+Technologist+%26+Independent+Music+Producer;Creator+of+EarthSphere+%7C+NASA+EONET+3D+Intelligence;Founder+of+Mermaidz+Records+%26+ExcuseVerse;38K%2B+Community+on+YouTube+%7C+DJ+ABHI-Maheshtala;Real-Time+Geospatial+%26+Cloud+Intelligence+Architect" alt="Abhilash Ghosh - Dynamic Typing Roles" />
+  </a>
+</p>
+
+<!-- Quick Action Badges -->
 <p align="center">
   <a href="https://abhilashghosh.pages.dev/"><img src="https://img.shields.io/badge/Portfolio-abhilashghosh.pages.dev-0284C7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/></a>
   <a href="https://www.youtube.com/c/djabhimaheshtala"><img src="https://img.shields.io/badge/YouTube-38K%2B%20Subscribers-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/></a>
@@ -21,49 +29,58 @@
 
 ---
 
-### ⚡ `SYSTEM.SUMMARY`
+### ⚡ `SYSTEM.CORE // EXECUTIVE BIO`
 
-> **Engineer, Founder, and Creative Producer** bridging the gap between high-performance software engineering, real-time 3D geospatial intelligence, and sound production.
+```text
+╔═════════════════════════════════════════════════════════════════════════════════════════╗
+║ IDENTITY:    Abhilash Ghosh (@djabhi31)                                                 ║
+║ LOCATION:    Kolkata, West Bengal, India [22.57°N, 88.36°E]                             ║
+║ DISCIPLINES: 3D Web Graphics · Cloud Architecture · AI Products · Audio Engineering     ║
+║ EDUCATION:   Master of Commerce (M.Com - Accounting & Finance), University of Calcutta  ║
+║ STACK:       Next.js 15 · Three.js · React 19 · WebGL · TypeScript · Azure · FL Studio  ║
+║ COMMUNITY:   38,000+ Music Creators & Fans worldwide (DJ ABHI-Maheshtala)               ║
+╚═════════════════════════════════════════════════════════════════════════════════════════╝
+```
 
-- 🌍 **Geospatial & 3D Web:** Architect of **[EarthSphere](https://www.earthsphere.in/)** and **[God's Eye View](https://godseyeview.earthsphere.in/)** — real-time planetary monitoring consoles utilizing NASA EONET feeds, Next.js 15, WebGL, and Microsoft Azure.
-- 🤖 **AI Products:** Creator of **[ExcuseVerse](https://www.excuseverse.app/)**, a viral AI-driven situational generation engine with 2,500+ curated scenarios across work, academics, and personal life.
-- 🎶 **Music & Brand Ecosystem:** Founder of **[Mermaidz Records](https://www.mermaidzrecords.in/)** (independent publishing & distribution across 150+ stores) and independent music creator as **DJ ABHI-Maheshtala** with over **38,000+ subscribers** on YouTube.
-- 🎓 **Education & Background:** Master of Commerce (M.Com - Accounting & Finance) at the University of Calcutta · Quality & Process auditing experience at Channelplay Limited.
+> **I engineer at the intersection of high-fidelity 3D web applications, real-time planetary telemetry, and modern sound production.**
+> Whether architecting interactive WebGL disaster tracking consoles or producing bass-heavy music for an audience of 38K+, my focus is crafting visceral digital experiences with zero compromise on performance or design.
 
 ---
 
-### 🚀 `PRODUCTION BUILDS & PLATFORMS`
+### 🚀 `PRODUCTION BUILDS & LIVE PLATFORMS`
 
 <table>
   <tr>
     <td width="50%" valign="top">
       <h3 align="left">🪐 <a href="https://www.earthsphere.in/">EarthSphere</a></h3>
       <p><b>Real-Time Planetary Intelligence Platform</b></p>
-      <p>Interactive 3D disaster and environmental tracker powered by NASA EONET feeds, Three.js, MapLibre GL, and React 19 / Next.js 15 with dynamic glassmorphism UI.</p>
+      <p>Interactive 3D environmental and disaster intelligence console powered by live <b>NASA EONET</b> feeds, Three.js shaders, MapLibre GL, and React 19 / Next.js 15.</p>
       <p>
         <img src="https://img.shields.io/badge/Next.js%2015-000000?style=flat-square&logo=nextdotjs&logoColor=white"/>
         <img src="https://img.shields.io/badge/Three.js-black?style=flat-square&logo=threedotjs&logoColor=white"/>
         <img src="https://img.shields.io/badge/WebGL-990000?style=flat-square&logo=webgl&logoColor=white"/>
         <img src="https://img.shields.io/badge/NASA%20EONET-0B3D91?style=flat-square&logo=nasa&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Status-Live%20Production-22C55E?style=flat-square"/>
       </p>
     </td>
     <td width="50%" valign="top">
       <h3 align="left">👁️ <a href="https://godseyeview.earthsphere.in/">God's Eye View (Cloud Edition)</a></h3>
       <p><b>Real-Time 3D Planetary Console on Azure</b></p>
-      <p>High-altitude planetary observation deck deployed natively on Microsoft Azure, orchestrating global situational awareness paired directly with EarthSphere telemetry.</p>
+      <p>Cloud-native orbital intelligence observation deck deployed on <b>Microsoft Azure</b>, pairing orbital situational awareness with global EarthSphere telemetry.</p>
       <p>
         <img src="https://img.shields.io/badge/Microsoft%20Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"/>
         <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
         <img src="https://img.shields.io/badge/WebGL-990000?style=flat-square&logo=webgl&logoColor=white"/>
         <img src="https://img.shields.io/badge/Cloud%20Native-232F3E?style=flat-square"/>
+        <img src="https://img.shields.io/badge/Status-Azure%20Live-22C55E?style=flat-square"/>
       </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h3 align="left">🤖 <a href="https://www.excuseverse.app/">ExcuseVerse</a></h3>
-      <p><b>AI Situational Generator & Platform</b></p>
-      <p>Intelligent web application delivering context-aware, believable excuses in seconds across 3 languages with one-tap social sharing and copy features.</p>
+      <p><b>AI Situational Generator & Web Platform</b></p>
+      <p>Viral AI generator crafting context-aware, believable excuses across 3 languages with one-tap instant social sharing and 2,500+ dynamic scenarios.</p>
       <p>
         <img src="https://img.shields.io/badge/AI%20Integration-8A2BE2?style=flat-square"/>
         <img src="https://img.shields.io/badge/Next.js-000?style=flat-square&logo=nextdotjs&logoColor=white"/>
@@ -73,12 +90,13 @@
     </td>
     <td width="50%" valign="top">
       <h3 align="left">🎶 <a href="https://www.mermaidzrecords.in/">Mermaidz Records</a></h3>
-      <p><b>Music Distribution & Publishing Brand</b></p>
-      <p>Digital label and publishing infrastructure empowering independent artists worldwide to release music to Spotify, Apple Music, YouTube Music, and 150+ DSPs.</p>
+      <p><b>Global Music Publishing & Distribution Label</b></p>
+      <p>Digital music label infrastructure empowering independent artists worldwide to distribute tracks to Spotify, Apple Music, YouTube Music, and 150+ global DSPs.</p>
       <p>
         <img src="https://img.shields.io/badge/Music%20Distribution-1DB954?style=flat-square"/>
         <img src="https://img.shields.io/badge/Global%20Publishing-F59E0B?style=flat-square"/>
         <img src="https://img.shields.io/badge/150%2B%20Stores-6366F1?style=flat-square"/>
+        <img src="https://img.shields.io/badge/Royalties-Active-10B981?style=flat-square"/>
       </p>
     </td>
   </tr>
@@ -95,8 +113,8 @@
     </td>
     <td width="50%" valign="top">
       <h3 align="left">🚀 <a href="https://github.com/djabhi31/github-achievement-unlocker">GitHub Achievement Unlocker</a></h3>
-      <p><b>Automated Developer Achievements Tool</b></p>
-      <p>1-Click automation tool & GitHub Action to unlock GitHub Badges (Galaxy Brain, Pull Shark, Pair Extraordinaire, Quickdraw) with clean modular code.</p>
+      <p><b>1-Click Developer Achievement Automation</b></p>
+      <p>Open-source automation tool & GitHub Action to unlock GitHub Badges (Galaxy Brain, Pull Shark, Pair Extraordinaire, Quickdraw) with clean modular code.</p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
         <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white"/>
@@ -108,28 +126,52 @@
 
 ---
 
-### 🛠️ `TECHNICAL ARSENAL`
+### 🎧 `CREATIVE STUDIO // DJ ABHI-MAHESHTALA`
+
+```text
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│  🎵 ARTIST:      DJ ABHI-Maheshtala                                                    │
+│  📺 YOUTUBE:     38,000+ Subscribers & Growing                                         │
+│  🎧 GENRES:      Bass-Heavy Remixes · Bollywood EDM Drops · Hip-Hop Instrumentals      │
+│  🏢 LABEL:       Founder of Mermaidz Records (Global Distribution to 150+ Platforms)   │
+│  🎛️ DAW:         FL Studio 24 · Ableton Live · Professional Sound Mastering            │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+<p align="center">
+  <a href="https://www.youtube.com/c/djabhimaheshtala"><img src="https://img.shields.io/badge/YouTube-DJ_ABHI_Maheshtala-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/></a>
+  <a href="https://open.spotify.com/artist/6cgJwZZxm6WnpGvrIEvdjR"><img src="https://img.shields.io/badge/Spotify-DJ_ABHI-1DB954?style=for-the-badge&logo=spotify&logoColor=white" alt="Spotify"/></a>
+  <a href="https://music.apple.com/gb/artist/dj-abhi-maheshtala/1713435326"><img src="https://img.shields.io/badge/Apple_Music-DJ_ABHI-FA243C?style=for-the-badge&logo=applemusic&logoColor=white" alt="Apple Music"/></a>
+  <a href="https://www.jiosaavn.com/artist/dj-abhi-maheshtala-songs/sBNssUMc-Ww_"><img src="https://img.shields.io/badge/JioSaavn-Listen_Now-2BC5B4?style=for-the-badge&logo=jiosaavn&logoColor=white" alt="JioSaavn"/></a>
+  <a href="https://www.instagram.com/djabhi.31"><img src="https://img.shields.io/badge/Instagram-@djabhi.31-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/></a>
+</p>
+
+---
+
+### 🛠️ `TECHNICAL ARSENAL & ENGINEERING MATRIX`
+
+<p align="left">
+  <!-- Frontend & 3D Web -->
+  <b>Frontend, UI Engine & 3D Graphics:</b><br/>
+  <img src="https://skillicons.dev/icons?i=nextjs,react,threejs,ts,js,tailwind,html,css" alt="Frontend & 3D Stack" />
+  <br/><br/>
+  <!-- Cloud, Backend & DevOps -->
+  <b>Cloud, Systems & Automation:</b><br/>
+  <img src="https://skillicons.dev/icons?i=azure,py,githubactions,cloudflare,git,github,vscode,postman" alt="Cloud & Tools Stack" />
+</p>
 
 ```text
 Languages & Core:     TypeScript · JavaScript (ES6+) · Python · HTML5 · CSS3 · SQL
 Frameworks & 3D:      Next.js 15 (App Router, Turbopack) · React 19 · Three.js · WebGL · MapLibre GL
 Styling & UI Engine:  TailwindCSS · Glassmorphism · CSS Grid · Motion UI
 Cloud & DevOps:       Microsoft Azure · GitHub Actions · Cloudflare Pages · Vercel · Git
-Audio & Creative:     FL Studio · Ableton Live · Audio Mixing & Mastering · Video Production
-Data & Business:      Process Management · Data Analytics · Financial Accounting · Tally ERP
+Audio & Creative:     FL Studio 24 · Ableton Live · Sound Design & Mixing · Video Production
+Data & Business:      Process Auditing · Data Analytics · Financial Modeling · Tally ERP · GST
 ```
-
-<p align="left">
-  <!-- Frontend & 3D -->
-  <img src="https://skillicons.dev/icons?i=ts,js,py,react,nextjs,threejs,tailwind,html,css" alt="Frontend & 3D Stack" />
-  <br/>
-  <!-- Cloud & Tools -->
-  <img src="https://skillicons.dev/icons?i=azure,githubactions,cloudflare,git,github,vscode,figma,postman" alt="Cloud & Tools Stack" />
-</p>
 
 ---
 
-<h2 align="center">📊 GitHub Contributions & Snake</h2>
+<h2 align="center">🐍 GitHub Contribution Snake</h2>
 
 <p align="center">
   <picture>
@@ -146,6 +188,10 @@ Data & Business:      Process Management · Data Analytics · Financial Accounti
 ---
 
 ### 📈 `SYSTEM TELEMETRY & ACTIVITY`
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=djabhi31&theme=tokyo-night&bg_color=030712&color=38BDF8&line=22D3EE&point=A855F7&area=true&hide_border=true" alt="djabhi31 Activity Graph" width="95%"/>
+</p>
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=djabhi31&show_icons=true&theme=tokyonight&hide_border=true&bg_color=030712&title_color=38BDF8&icon_color=22D3EE&text_color=94A3B8" alt="djabhi31 GitHub Stats" height="165"/>
@@ -180,5 +226,5 @@ Data & Business:      Process Management · Data Analytics · Financial Accounti
 </p>
 
 <p align="center">
-  <sub>Built with ⚡ &amp; Precision by <b>Abhilash Ghosh</b> · Kolkata, India</sub>
+  <sub>Designed &amp; Engineered with ⚡ by <b>Abhilash Ghosh</b> · Kolkata, India</sub>
 </p>
