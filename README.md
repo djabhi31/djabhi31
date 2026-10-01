@@ -43,7 +43,7 @@
 ```
 
 > **I engineer at the intersection of high-fidelity 3D web applications, real-time planetary telemetry, and modern sound production.**
-> Whether architecting interactive WebGL disaster tracking consoles or producing bass-heavy music for an audience of 38K+, my focus is crafting visceral digital experiences with zero compromise on performance or design.
+> Whether architecting interactive WebGL disaster tracking consoles or producing bass-heavy music for an audience of 38,000+, my focus is crafting visceral digital experiences with zero compromise on performance or design.
 
 ---
 
@@ -190,16 +190,28 @@ Data & Business:      Process Auditing · Data Analytics · Financial Modeling �
 ### 📈 `SYSTEM TELEMETRY & ACTIVITY`
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=djabhi31&theme=tokyo-night&bg_color=030712&color=38BDF8&line=22D3EE&point=A855F7&area=true&hide_border=true" alt="djabhi31 Activity Graph" width="95%"/>
-</p>
-
-<p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=djabhi31&show_icons=true&theme=tokyonight&hide_border=true&bg_color=030712&title_color=38BDF8&icon_color=22D3EE&text_color=94A3B8" alt="djabhi31 GitHub Stats" height="165"/>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=djabhi31&theme=tokyonight&hide_border=true&background=030712&stroke=1E293B&ring=38BDF8&fire=F59E0B&currStreakNum=F8FAFC&sideNums=94A3B8" alt="djabhi31 GitHub Streak" height="165"/>
 </p>
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=djabhi31&layout=compact&theme=tokyonight&hide_border=true&bg_color=030712&title_color=38BDF8&text_color=94A3B8" alt="Top Languages" height="140"/>
+</p>
+
+---
+
+### 🏆 `GITHUB BADGES & ACHIEVEMENTS`
+
+<p align="center">
+  <a href="https://github.com/djabhi31?tab=achievements">
+    <img src="https://github.com/djabhi31/github-achievements/raw/main/assets/galaxy-brain-default.png" width="90" alt="Galaxy Brain" onerror="this.style.display='none'"/>
+    <img src="https://github.com/djabhi31/github-achievements/raw/main/assets/pull-shark-default.png" width="90" alt="Pull Shark" onerror="this.style.display='none'"/>
+    <img src="https://github.com/djabhi31/github-achievements/raw/main/assets/pair-extraordinaire-default.png" width="90" alt="Pair Extraordinaire" onerror="this.style.display='none'"/>
+    <img src="https://github.com/djabhi31/github-achievements/raw/main/assets/quickdraw-default.png" width="90" alt="Quickdraw" onerror="this.style.display='none'"/>
+  </a>
+</p>
+<p align="center">
+  <sub><i>Unlocked via <a href="https://github.com/djabhi31/github-achievement-unlocker">github-achievement-unlocker</a></i></sub>
 </p>
 
 ---
