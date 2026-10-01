@@ -45,8 +45,8 @@ def generate_svgs():
             line += map_pixel(p)
         line_esc = line.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
         y_pos = start_y + i * dy
-        tspan_dark_lines.append(f'        <tspan x="250" y="{y_pos:.1f}">{line_esc}</tspan>')
-        tspan_light_lines.append(f'        <tspan x="250" y="{y_pos:.1f}">{line_esc}</tspan>')
+        tspan_dark_lines.append(f'          <tspan x="250" y="{y_pos:.1f}">{line_esc}</tspan>')
+        tspan_light_lines.append(f'          <tspan x="250" y="{y_pos:.1f}">{line_esc}</tspan>')
 
     tspans_dark_str = '\n'.join(tspan_dark_lines)
     tspans_light_str = '\n'.join(tspan_light_lines)
@@ -57,7 +57,6 @@ def generate_svgs():
     base_x = 61
     base_y = 438
 
-    # Preset natural audio wave patterns for 24 bars
     patterns = [
         # bass
         [4, 22, 10, 26, 8, 4, 0.75],
@@ -94,14 +93,12 @@ def generate_svgs():
         y_vals = f"{base_y - p[0]};{base_y - p[1]};{base_y - p[2]};{base_y - p[3]};{base_y - p[4]};{base_y - p[0]}"
         dur = f"{p[5]:.2f}s"
         
-        # Dark bar
         bar_d = f'''        <rect x="{bx}" y="{base_y - p[0]}" width="10" height="{p[0]}" rx="3" fill="url(#eqGradDark)">
           <animate attributeName="height" values="{h_vals}" dur="{dur}" repeatCount="indefinite"/>
           <animate attributeName="y" values="{y_vals}" dur="{dur}" repeatCount="indefinite"/>
         </rect>'''
         eq_dark_bars.append(bar_d)
 
-        # Light bar
         bar_l = f'''        <rect x="{bx}" y="{base_y - p[0]}" width="10" height="{p[0]}" rx="3" fill="url(#eqGradLight)">
           <animate attributeName="height" values="{h_vals}" dur="{dur}" repeatCount="indefinite"/>
           <animate attributeName="y" values="{y_vals}" dur="{dur}" repeatCount="indefinite"/>
@@ -111,7 +108,7 @@ def generate_svgs():
     eq_dark_str = '\n'.join(eq_dark_bars)
     eq_light_str = '\n'.join(eq_light_bars)
 
-    # 2. Build enhanced dark.svg
+    # 2. Build hyper-animated dark.svg
     dark_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 610" width="1180" height="610" role="img" aria-label="Abhilash Ghosh (@djabhi31) - Full-Stack Engineer, 3D Web &amp; Creative Technologist">
   <defs>
     <!-- Background Gradients -->
@@ -128,22 +125,19 @@ def generate_svgs():
       <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Accent Linear Gradients -->
-    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="50%" stop-color="#22D3EE"/>
-      <stop offset="100%" stop-color="#06B6D4"/>
+    <!-- Liquid Animated Neon Wave Gradient for ASCII Portrait -->
+    <linearGradient id="asciiNeonFlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8">
+        <animate attributeName="stop-color" values="#38BDF8;#A855F7;#22D3EE;#34D399;#38BDF8" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#818CF8">
+        <animate attributeName="stop-color" values="#818CF8;#EC4899;#38BDF8;#818CF8;#818CF8" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#C084FC">
+        <animate attributeName="stop-color" values="#C084FC;#22D3EE;#A855F7;#818CF8;#C084FC" dur="6s" repeatCount="indefinite"/>
+      </stop>
     </linearGradient>
-    <linearGradient id="neonViolet" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#C084FC"/>
-      <stop offset="50%" stop-color="#A855F7"/>
-      <stop offset="100%" stop-color="#6366F1"/>
-    </linearGradient>
-    <linearGradient id="neonGreen" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#34D399"/>
-      <stop offset="100%" stop-color="#10B981"/>
-    </linearGradient>
-    
+
     <!-- Laser Border Beam Gradient -->
     <linearGradient id="laserBeam" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#22D3EE"/>
@@ -152,7 +146,6 @@ def generate_svgs():
       <stop offset="100%" stop-color="#34D399"/>
     </linearGradient>
 
-    <!-- Base Frame Border Gradient -->
     <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.45"/>
       <stop offset="50%" stop-color="#818CF8" stop-opacity="0.20"/>
@@ -166,7 +159,7 @@ def generate_svgs():
     <!-- Scanline Laser Gradient -->
     <linearGradient id="scanlineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#22D3EE" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#22D3EE" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#22D3EE" stop-opacity="0.95"/>
       <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
     </linearGradient>
 
@@ -207,7 +200,7 @@ def generate_svgs():
   <style>
     .mono {{ font-family: ui-monospace, SFMono-Regular, "Liberation Mono", Menlo, Consolas, monospace; }}
     .sans {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }}
-    .ascii {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 7.5px; font-weight: 700; letter-spacing: 0.8px; fill: #38BDF8; }}
+    .ascii {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 7.5px; font-weight: 700; letter-spacing: 0.8px; fill: url(#asciiNeonFlow); }}
   </style>
 
   <!-- Root Canvas Background -->
@@ -220,7 +213,7 @@ def generate_svgs():
   <!-- Outer Glass Frame Base Border -->
   <rect x="2" y="2" width="1176" height="606" rx="21" fill="none" stroke="url(#borderGrad)" stroke-width="1.5"/>
 
-  <!-- ==================== ANIMATION 1: LASER BORDER SHIMMER ==================== -->
+  <!-- ANIMATION 1: LASER BORDER SHIMMER -->
   <rect x="2" y="2" width="1176" height="606" rx="21" fill="none" stroke="url(#laserBeam)" stroke-width="2.5" stroke-dasharray="160 580">
     <animate attributeName="stroke-dashoffset" values="0;-740" dur="4.5s" repeatCount="indefinite"/>
   </rect>
@@ -248,38 +241,65 @@ def generate_svgs():
 
     <!-- Biometric ID Header -->
     <text x="44" y="93" class="mono" font-size="10" fill="#38BDF8" font-weight="600" letter-spacing="1">VISUAL.MAP // BIOMETRIC-ID</text>
-    <text x="456" y="93" text-anchor="end" class="mono" font-size="9" fill="#10B981" font-weight="600">● TARGET LOCK: 99.4%</text>
+    <text x="456" y="93" text-anchor="end" class="mono" font-size="9" fill="#10B981" font-weight="600">● TARGET LOCK: 99.8%</text>
 
     <!-- ASCII Portrait Container Box -->
     <rect x="42" y="104" width="416" height="258" rx="10" fill="#040914" fill-opacity="0.94" stroke="#1E293B" stroke-width="1"/>
 
-    <!-- ==================== ANIMATION 2: HUD RETICLE & CROSSHAIRS ==================== -->
-    <path d="M 50 118 L 50 112 L 56 112" stroke="#22D3EE" stroke-width="1.8" fill="none"/>
-    <path d="M 450 118 L 450 112 L 444 112" stroke="#22D3EE" stroke-width="1.8" fill="none"/>
-    <path d="M 50 348 L 50 354 L 56 354" stroke="#22D3EE" stroke-width="1.8" fill="none"/>
-    <path d="M 450 348 L 450 354 L 444 354" stroke="#22D3EE" stroke-width="1.8" fill="none"/>
+    <!-- ANIMATION 2: CONCENTRIC RADAR RINGS BEHIND PORTRAIT -->
+    <circle cx="250" cy="225" r="15" fill="none" stroke="#22D3EE" stroke-width="1.2" opacity="0.6">
+      <animate attributeName="r" values="12;130" dur="3.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.75;0" dur="3.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="225" r="15" fill="none" stroke="#A855F7" stroke-width="1.2" opacity="0.6">
+      <animate attributeName="r" values="12;130" begin="1.8s" dur="3.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.75;0" begin="1.8s" dur="3.6s" repeatCount="indefinite"/>
+    </circle>
 
-    <!-- HUD Telemetry Tags on Portrait -->
+    <!-- ANIMATION 3: FLOATING & GLITCHING ASCII MATRIX -->
+    <g id="portrait-matrix">
+      <!-- 3D Breathing Float Animation -->
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -3; 0 0; 0 3; 0 0" dur="4.2s" repeatCount="indefinite"/>
+      <!-- Subtle Digital Glitch Opacity -->
+      <animate attributeName="opacity" values="1;1;0.86;1;0.75;1;1" keyTimes="0;0.48;0.49;0.50;0.82;0.83;1" dur="7s" repeatCount="indefinite"/>
+      
+      <text class="ascii" text-anchor="middle">
+{tspans_dark_str}
+      </text>
+    </g>
+
+    <!-- ANIMATION 4: FACE TRACKING HUD RETICLE -->
+    <g id="face-tracking-reticle">
+      <!-- Targeting box over face area -->
+      <rect x="186" y="156" width="128" height="118" rx="6" fill="none" stroke="#22D3EE" stroke-width="1.2" stroke-dasharray="8 6" opacity="0.8">
+        <animate attributeName="stroke-dashoffset" values="0;28" dur="2.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.45;0.95;0.45" dur="2.5s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Center Targeting Crosshairs -->
+      <path d="M 244 215 L 256 215 M 250 209 L 250 221" stroke="#22D3EE" stroke-width="1.4" opacity="0.85">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>
+      </path>
+      <!-- Corner HUD Brackets -->
+      <path d="M 50 118 L 50 112 L 56 112" stroke="#22D3EE" stroke-width="1.8" fill="none"/>
+      <path d="M 450 118 L 450 112 L 444 112" stroke="#22D3EE" stroke-width="1.8" fill="none"/>
+      <path d="M 50 348 L 50 354 L 56 354" stroke="#22D3EE" stroke-width="1.8" fill="none"/>
+      <path d="M 450 348 L 450 354 L 444 354" stroke="#22D3EE" stroke-width="1.8" fill="none"/>
+      <!-- Target lock tag -->
+      <rect x="190" y="278" width="120" height="16" rx="4" fill="#030712" fill-opacity="0.9" stroke="#22D3EE" stroke-width="0.75"/>
+      <text x="250" y="289" text-anchor="middle" class="mono" font-size="7.5" fill="#38BDF8" font-weight="700">LOCK: ABHILASH GHOSH</text>
+    </g>
+
+    <!-- Telemetry Coordinates on Portrait Box -->
     <text x="56" y="124" class="mono" font-size="8" fill="#38BDF8" opacity="0.9">[COORDS: 22.57°N, 88.36°E]</text>
     <text x="444" y="124" text-anchor="end" class="mono" font-size="8" fill="#A855F7" opacity="0.9">CALCUTTA UNIV</text>
 
-    <!-- ASCII Character Stream -->
-    <text class="ascii" text-anchor="middle">
-{tspans_dark_str}
-    </text>
-
-    <!-- ==================== ANIMATION 3: HOLOGRAM SCANLINE SWEEP ==================== -->
-    <line x1="43" y1="106" x2="457" y2="106" stroke="url(#scanlineGrad)" stroke-width="2.5" opacity="0.85">
-      <animate attributeName="y1" values="106;358;106" dur="4.5s" repeatCount="indefinite"/>
-      <animate attributeName="y2" values="106;358;106" dur="4.5s" repeatCount="indefinite"/>
+    <!-- ANIMATION 5: LASER SCANLINE SWEEP -->
+    <line x1="43" y1="106" x2="457" y2="106" stroke="url(#scanlineGrad)" stroke-width="2.5" opacity="0.9">
+      <animate attributeName="y1" values="106;358;106" dur="4.2s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="106;358;106" dur="4.2s" repeatCount="indefinite"/>
     </line>
 
-    <!-- Subtle Glitch / Signal Flicker Box Overlay -->
-    <rect x="42" y="104" width="416" height="258" rx="10" fill="#22D3EE" opacity="0">
-      <animate attributeName="opacity" values="0;0.05;0;0.03;0;0;0.06;0" keyTimes="0;0.12;0.14;0.45;0.47;0.82;0.84;1" dur="6s" repeatCount="indefinite"/>
-    </rect>
-
-    <!-- ==================== ANIMATION 4: BOUNCING AUDIO EQUALIZER (DJ ABHI) ==================== -->
+    <!-- ANIMATION 6: BOUNCING AUDIO EQUALIZER (DJ ABHI) -->
     <g id="audio-equalizer">
       <rect x="42" y="372" width="416" height="74" rx="8" fill="#070D1A" stroke="#1E293B" stroke-width="1"/>
       <circle cx="56" cy="386" r="3.5" fill="#F43F5E">
@@ -433,7 +453,7 @@ def generate_svgs():
       </g>
     </g>
 
-    <!-- ==================== ANIMATION 5: SYSTEM TELEMETRY WORKLOAD METERS ==================== -->
+    <!-- 3. ANIMATION 7: SYSTEM TELEMETRY WORKLOAD METERS -->
     <g transform="translate(510, 332)">
       <text x="0" y="0" class="mono" font-size="10" fill="#38BDF8" font-weight="600" letter-spacing="1">// SYSTEM TELEMETRY &amp; WORKLOADS</text>
       
@@ -554,7 +574,7 @@ def generate_svgs():
   </g>
 </svg>'''
 
-    # 3. Build enhanced light.svg
+    # 3. Build hyper-animated light.svg
     light_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 610" width="1180" height="610" role="img" aria-label="Abhilash Ghosh (@djabhi31) - Full-Stack Engineer, 3D Web &amp; Creative Technologist">
   <defs>
     <!-- Background Gradients (Light) -->
@@ -571,7 +591,20 @@ def generate_svgs():
       <stop offset="100%" stop-color="#F8FAFC" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Accent Linear Gradients -->
+    <!-- Liquid Animated Neon Wave Gradient for ASCII Portrait (Light) -->
+    <linearGradient id="asciiLightFlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A">
+        <animate attributeName="stop-color" values="#1E3A8A;#4338CA;#2563EB;#6D28D9;#1E3A8A" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#2563EB">
+        <animate attributeName="stop-color" values="#2563EB;#7C3AED;#1D4ED8;#0284C7;#2563EB" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#0F172A">
+        <animate attributeName="stop-color" values="#0F172A;#312E81;#1E293B;#1E3A8A;#0F172A" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- Laser Border Beam Gradient -->
     <linearGradient id="laserBeamLight" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#2563EB"/>
       <stop offset="35%" stop-color="#4F46E5"/>
@@ -592,7 +625,7 @@ def generate_svgs():
     <!-- Scanline Laser Gradient (Light) -->
     <linearGradient id="scanlineGradLight" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#2563EB" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#2563EB" stop-opacity="0.65"/>
+      <stop offset="50%" stop-color="#2563EB" stop-opacity="0.8"/>
       <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
     </linearGradient>
 
@@ -638,7 +671,7 @@ def generate_svgs():
   <style>
     .mono {{ font-family: ui-monospace, SFMono-Regular, "Liberation Mono", Menlo, Consolas, monospace; }}
     .sans {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }}
-    .ascii-light {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 7.5px; font-weight: 700; letter-spacing: 0.8px; fill: #1E293B; }}
+    .ascii-light {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 7.5px; font-weight: 700; letter-spacing: 0.8px; fill: url(#asciiLightFlow); }}
   </style>
 
   <!-- Root Canvas Background -->
@@ -651,7 +684,7 @@ def generate_svgs():
   <!-- Outer Glass Frame Base Border -->
   <rect x="2" y="2" width="1176" height="606" rx="21" fill="none" stroke="url(#borderGradLight)" stroke-width="1.5"/>
 
-  <!-- ==================== ANIMATION 1: LASER BORDER SHIMMER ==================== -->
+  <!-- ANIMATION 1: LASER BORDER SHIMMER -->
   <rect x="2" y="2" width="1176" height="606" rx="21" fill="none" stroke="url(#laserBeamLight)" stroke-width="2.5" stroke-dasharray="160 580">
     <animate attributeName="stroke-dashoffset" values="0;-740" dur="4.5s" repeatCount="indefinite"/>
   </rect>
@@ -679,38 +712,65 @@ def generate_svgs():
 
     <!-- Biometric ID Header -->
     <text x="44" y="93" class="mono" font-size="10" fill="#2563EB" font-weight="700" letter-spacing="1">VISUAL.MAP // BIO-TELEMETRY</text>
-    <text x="456" y="93" text-anchor="end" class="mono" font-size="9" fill="#059669" font-weight="700">● TARGET LOCK: 99.4%</text>
+    <text x="456" y="93" text-anchor="end" class="mono" font-size="9" fill="#059669" font-weight="700">● TARGET LOCK: 99.8%</text>
 
     <!-- ASCII Portrait Container Box -->
     <rect x="42" y="104" width="416" height="258" rx="10" fill="#F1F5F9" fill-opacity="0.95" stroke="#CBD5E1" stroke-width="1"/>
 
-    <!-- ==================== ANIMATION 2: HUD RETICLE & CROSSHAIRS ==================== -->
-    <path d="M 50 118 L 50 112 L 56 112" stroke="#2563EB" stroke-width="1.8" fill="none"/>
-    <path d="M 450 118 L 450 112 L 444 112" stroke="#2563EB" stroke-width="1.8" fill="none"/>
-    <path d="M 50 348 L 50 354 L 56 354" stroke="#2563EB" stroke-width="1.8" fill="none"/>
-    <path d="M 450 348 L 450 354 L 444 354" stroke="#2563EB" stroke-width="1.8" fill="none"/>
+    <!-- ANIMATION 2: CONCENTRIC RADAR RINGS BEHIND PORTRAIT -->
+    <circle cx="250" cy="225" r="15" fill="none" stroke="#2563EB" stroke-width="1.2" opacity="0.6">
+      <animate attributeName="r" values="12;130" dur="3.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.75;0" dur="3.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="225" r="15" fill="none" stroke="#7C3AED" stroke-width="1.2" opacity="0.6">
+      <animate attributeName="r" values="12;130" begin="1.8s" dur="3.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.75;0" begin="1.8s" dur="3.6s" repeatCount="indefinite"/>
+    </circle>
 
-    <!-- HUD Telemetry Tags on Portrait -->
+    <!-- ANIMATION 3: FLOATING & GLITCHING ASCII MATRIX -->
+    <g id="portrait-matrix-light">
+      <!-- 3D Breathing Float Animation -->
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -3; 0 0; 0 3; 0 0" dur="4.2s" repeatCount="indefinite"/>
+      <!-- Subtle Digital Glitch Opacity -->
+      <animate attributeName="opacity" values="1;1;0.88;1;0.78;1;1" keyTimes="0;0.48;0.49;0.50;0.82;0.83;1" dur="7s" repeatCount="indefinite"/>
+      
+      <text class="ascii-light" text-anchor="middle">
+{tspans_light_str}
+      </text>
+    </g>
+
+    <!-- ANIMATION 4: FACE TRACKING HUD RETICLE -->
+    <g id="face-tracking-reticle-light">
+      <!-- Targeting box over face area -->
+      <rect x="186" y="156" width="128" height="118" rx="6" fill="none" stroke="#2563EB" stroke-width="1.2" stroke-dasharray="8 6" opacity="0.8">
+        <animate attributeName="stroke-dashoffset" values="0;28" dur="2.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.45;0.95;0.45" dur="2.5s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Center Targeting Crosshairs -->
+      <path d="M 244 215 L 256 215 M 250 209 L 250 221" stroke="#2563EB" stroke-width="1.4" opacity="0.85">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>
+      </path>
+      <!-- Corner HUD Brackets -->
+      <path d="M 50 118 L 50 112 L 56 112" stroke="#2563EB" stroke-width="1.8" fill="none"/>
+      <path d="M 450 118 L 450 112 L 444 112" stroke="#2563EB" stroke-width="1.8" fill="none"/>
+      <path d="M 50 348 L 50 354 L 56 354" stroke="#2563EB" stroke-width="1.8" fill="none"/>
+      <path d="M 450 348 L 450 354 L 444 354" stroke="#2563EB" stroke-width="1.8" fill="none"/>
+      <!-- Target lock tag -->
+      <rect x="190" y="278" width="120" height="16" rx="4" fill="#FFFFFF" fill-opacity="0.9" stroke="#2563EB" stroke-width="0.75"/>
+      <text x="250" y="289" text-anchor="middle" class="mono" font-size="7.5" fill="#1D4ED8" font-weight="700">LOCK: ABHILASH GHOSH</text>
+    </g>
+
+    <!-- Telemetry Coordinates on Portrait Box -->
     <text x="56" y="124" class="mono" font-size="8" fill="#2563EB" font-weight="600">[COORDS: 22.57°N, 88.36°E]</text>
     <text x="444" y="124" text-anchor="end" class="mono" font-size="8" fill="#7C3AED" font-weight="600">CALCUTTA UNIV</text>
 
-    <!-- ASCII Character Stream -->
-    <text class="ascii-light" text-anchor="middle">
-{tspans_light_str}
-    </text>
-
-    <!-- ==================== ANIMATION 3: HOLOGRAM SCANLINE SWEEP ==================== -->
-    <line x1="43" y1="106" x2="457" y2="106" stroke="url(#scanlineGradLight)" stroke-width="2.5" opacity="0.75">
-      <animate attributeName="y1" values="106;358;106" dur="4.5s" repeatCount="indefinite"/>
-      <animate attributeName="y2" values="106;358;106" dur="4.5s" repeatCount="indefinite"/>
+    <!-- ANIMATION 5: LASER SCANLINE SWEEP -->
+    <line x1="43" y1="106" x2="457" y2="106" stroke="url(#scanlineGradLight)" stroke-width="2.5" opacity="0.8">
+      <animate attributeName="y1" values="106;358;106" dur="4.2s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="106;358;106" dur="4.2s" repeatCount="indefinite"/>
     </line>
 
-    <!-- Subtle Signal Flicker Box Overlay -->
-    <rect x="42" y="104" width="416" height="258" rx="10" fill="#2563EB" opacity="0">
-      <animate attributeName="opacity" values="0;0.04;0;0.02;0;0;0.05;0" keyTimes="0;0.12;0.14;0.45;0.47;0.82;0.84;1" dur="6s" repeatCount="indefinite"/>
-    </rect>
-
-    <!-- ==================== ANIMATION 4: BOUNCING AUDIO EQUALIZER (DJ ABHI) ==================== -->
+    <!-- ANIMATION 6: BOUNCING AUDIO EQUALIZER (DJ ABHI) -->
     <g id="audio-equalizer">
       <rect x="42" y="372" width="416" height="74" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
       <circle cx="56" cy="386" r="3.5" fill="#E11D48">
@@ -864,7 +924,7 @@ def generate_svgs():
       </g>
     </g>
 
-    <!-- ==================== ANIMATION 5: SYSTEM TELEMETRY WORKLOAD METERS ==================== -->
+    <!-- 3. ANIMATION 7: SYSTEM TELEMETRY WORKLOAD METERS -->
     <g transform="translate(510, 332)">
       <text x="0" y="0" class="mono" font-size="10" fill="#2563EB" font-weight="700" letter-spacing="1">// SYSTEM TELEMETRY &amp; WORKLOADS</text>
       
